@@ -1,4 +1,4 @@
-all: fizzbuzz-c fizzbuzz-cpp FizzBuzz.class fizzbuzz-coffee.js
+all: fizzbuzz-c fizzbuzz-cpp FizzBuzz.class fizzbuzz-coffee.js fizzbuzz-go
 
 clean:
 	rm -f fizzbuzz-c fizzbuzz-cpp FizzBuzz.class fizzbuzz-coffee.js
@@ -14,3 +14,6 @@ FizzBuzz.class:
 
 fizzbuzz-coffee.js: fizzbuzz.coffee
 	coffee -c -p fizzbuzz.coffee > fizzbuzz-coffee.js
+
+fizzbuzz-go: fizzbuzz.go
+	go build -o fizzbuzz-go fizzbuzz.go
